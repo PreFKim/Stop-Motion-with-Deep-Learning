@@ -14,6 +14,12 @@
 
 <p align="center"><img src="./img/LayerUNET.PNG"></p>
 
+## 파일 설명
+
+- training.ipynb : 모델 학습 파이프라인
+
+- videoslice.ipynb : 비디오파일을 이미지로 전환하는 전처리, 스탑모션 영상 제작
+
 --- 
 
 <p align="center"><img src="./img/1.jpg"></p>
