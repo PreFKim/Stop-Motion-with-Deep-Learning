@@ -7,6 +7,9 @@ import argparse
 def convert(video_path, save_path, for_label=True):
     if for_label:
         save_path = save_path+"(label)"
+
+    if os.path.exists(save_path) == False:
+        os.makedirs(save_path)
         
     for filename in tqdm.tqdm(glob.glob(os.path.join(video_path,'*'))):
         vidcap = cv2.VideoCapture(filename)

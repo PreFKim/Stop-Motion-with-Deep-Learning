@@ -6,6 +6,10 @@ import argparse
 
 
 def get_mask(image_path, save_path):
+    
+    if os.path.exists(save_path) == False:
+        os.makedirs(save_path)
+
     for filename in glob.glob(os.path.join(image_path,"*")):
         img = cv2.imread(filename)
         img = cv2.inRange(img, [226,226,226], [255,255,255]) # 해당 범위 내의 픽셀은 
