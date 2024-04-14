@@ -36,8 +36,8 @@ def convert(video_path, save_path, for_label=True):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--video_path", type="str", default="./data/videos")
-    parser.add_argument("--save_path", type="str", default="./data/images")
+    parser.add_argument("--video_path", type=str, default="./data/videos")
+    parser.add_argument("--save_path", type=str, default="./data/images")
     parser.add_argument("--for_label", action="store_true")
 
     args = parser.parse_args()

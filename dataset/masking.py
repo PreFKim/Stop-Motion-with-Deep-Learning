@@ -16,7 +16,7 @@ def get_mask(image_path, save_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--video_path", type="str", default="./data/images(label)")
-    parser.add_argument("--mask_path", type="str", default="./data/masks")
+    parser.add_argument("--video_path", type=str, default="./data/images(label)")
+    parser.add_argument("--mask_path", type=str, default="./data/masks")
 
     args = parser.parse_args()

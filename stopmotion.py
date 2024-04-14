@@ -67,10 +67,10 @@ def main(model, video_path, bg_path):
         count += 1
     stopmotion(f"./result/{os.path.basename(video_path)}", vidcap, mask, bg)
 
-if __name__ == "main":
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--checkpoints", type="str", default="")
-    parser.add_argument("--video_path", type="str", default="")
+    parser.add_argument("--checkpoints", type=str, default="")
+    parser.add_argument("--video_path", type=str, default="")
     args = parser.parse_args()
 
     model = tf.keras.models.load_model(args.checkpoints, custom_objects = {'Focal_IoU':Focal_IoU})

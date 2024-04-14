@@ -135,13 +135,13 @@ def train(args):
         hist_df.to_csv(f)
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--seed", type="int", default="-1")
-    parser.add_argument("--epochs", type="int", default="50")
-    parser.add_argument("--batch_size", type="int", default="32")
-    parser.add_argument("--valid_ratio", type="float", default="0.2")
-    parser.add_argument("--data_path", type="str", default="./data")
+    parser.add_argument("--seed", type=int, default="-1")
+    parser.add_argument("--epochs", type=int, default="50")
+    parser.add_argument("--batch_size", type=int, default="32")
+    parser.add_argument("--valid_ratio", type=float, default="0.2")
+    parser.add_argument("--data_path", type=str, default="./data")
 
     args = parser.parse_args()
 
